@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  <title>Projet DL</title>
+  <style>
+    .wrapper {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    }
+
+    main {
+    flex: 1;
+    }
+
+    footer {
+    margin-top: auto;
+    }
+
+    .marg {
+    margin: 65px;
+    }
+</style>
+</head>
+<body>
+
+  <!--Header-->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Titre du header -->
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">
+                    <!--<img src="" width="30" height="30" alt="">-->
+                    Projet final Deep learning
+                </a>
+            </nav>
+
+            <!-- Bouton de navigation pour les petits écrans -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Liens de navigation -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarNav" aria-labelledby="navbarNavLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="navbarNavLabel">Menu</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('about') }}">À propos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </header>
+
+  <!--corps de la page web-->
+<div class="marg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center">Détection de messages haineux et offensants sur Twitter</h1>
+      </div>
+    </div>
+  
+    <div class="row mt-5">
+      <div class="col-md-6 offset-md-3">
+        <form action="http://localhost:5000/" method="post" class="d-flex">
+          <div class="input-group">
+            <input type="text" placeholder="Entrez un mot-clé, un @username, un #hashtag ou une phrase" name="search" class="form-control">
+            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--Footer-->
+  <div class="wrapper">
+  <footer class="bg-light text-center text-lg-start">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">À propos</h5>
+          <p>
+            Ce site a été créé dans le cadre de notre projet final pour la matière 8INF892 - Apprentissage profond
+          </p>
+        </div>
+  
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Liens</h5>
+  
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#" class="text-dark">Accueil</a>
+            </li>
+            <li>
+              <a href="{{ url_for('about') }}" class="text-dark">À propos</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-0">Repository GitHub</h5>
+            
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="https://github.com/kingRita/DL" class="btn btn-secondary">
+                <i class="fa fa-github"></i> GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Projet final Deep learning
+    </div>
+  </footer>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
